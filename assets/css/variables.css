@@ -1,0 +1,122 @@
+/* 🎨 Paleta de colores - Muy bien elegida para la temática */
+:root {
+    /* Paleta Kitty */
+    --color-claro: #eecb96;  /* Perfecto para fondos suaves */
+    --color-medio-claro: #e2ad7e;  /* Buen tono intermedio */
+    --color-medio: #d88b5f;  /* Acertado para elementos destacados */
+    --color-medio-oscuro: #bf5a36;  /* Ideal para botones/interacciones */
+    --color-oscuro: #a82824;  /* Excelente contraste */
+
+    /* Mejora: Añadir color para estados de error o éxito */
+    --color-error: #ff6b6b; /* Rojo */
+    --color-success: #51cf66; /* Verde */
+
+    /* Textos - Buena elección de contrastes */
+    --texto-principal: #fff5e1;
+    --texto-secundario: #e7d7c1;
+
+    /* Botones - Efecto hover bien definido */
+    --btn-bg: rgba(140, 28, 19, 0.8);
+    --btn-text: #ffffff;
+    --btn-hover: rgba(140, 28, 19, 1);
+
+    /* Fondos - Coherente con la paleta */
+    --fondo-base: #fdf6f0;
+    --fondo-seccion: #fff9f2;
+
+    /* Bordes y sombras - Sutil y elegante */
+    --borde-suave: 1px solid rgba(0, 0, 0, 0.1);
+    --sombra-suave: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    /* Sombras de texto - Legible sobre imágenes */
+    --sombra-texto: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --filtro-fondo: brightness(0.8) sepia(10%);
+
+    /* Tamaños de texto - Escala modular perfecta */
+    --text-xs: 0.75rem;   /* 12px */
+    --text-sm: 0.875rem;  /* 14px */
+    --text-base: 1rem;    /* 16px */
+    --text-md: 1.125rem;  /* 18px */
+    --text-lg: 1.25rem;   /* 20px */
+    --text-xl: 1.5rem;    /* 24px */
+    --text-2xl: 2rem;     /* 32px */
+    --text-3xl: 3rem;     /* 48px */
+    --text-4xl: 4rem;     /* 64px */
+
+    /* Espaciados - Muy bien escalados */
+    --space-xxs: 0.25rem; /* 4px */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 0.75rem;  /* 12px */
+    --space-md: 1rem;     /* 16px */
+    --space-lg: 1.5rem;   /* 24px */
+    --space-xl: 2rem;     /* 32px */
+    --space-2xl: 3rem;    /* 48px */
+    --space-3xl: 4rem;    /* 64px */
+
+    /* Anchos máximos - Responsive design */
+    --max-width-sm: 540px;
+    --max-width-md: 720px;
+    --max-width-lg: 960px;
+    --max-width-xl: 1140px;
+    --max-width-full: 100%;
+
+    /* Bordes redondeados - Consistente */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 9999px;
+
+    /* Grosor de bordes - Para varios usos */
+    --border-thin: 1px;
+    --border-medium: 2px;
+    --border-thick: 4px;
+
+    /* Alturas comunes - Buenas prácticas */
+    --height-header: 60px;
+    --height-hero: 80vh;
+    --height-section-min: 50vh;
+
+    /* Capas de profundidad - Bien organizado */
+    --z-index-base: 1;
+    --z-index-menu: 10;
+    --z-index-modal: 100;
+    --z-index-toast: 200;
+
+    /* Animaciones - Transiciones suaves */
+    --transicion-rapida: 0.2s ease-in-out;
+    --transicion-media: 0.4s ease;
+    --duracion-animacion: 0.6s;
+    --easing-principal: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Tamaños de contenedores responsive - Completo */
+    --container-xs: 320px;
+    --container-sm: 480px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-xxl: 1440px;
+
+    /* Breakpoints - Estándares modernos */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+
+    /* Opacidades - Para efectos visuales */
+    --opacidad-suave: 0.8;
+    --opacidad-media: 0.5;
+    --opacidad-baja: 0.3;
+
+    /* Alturas extra - Buenas para estructuras */
+    --height-fullscreen: 100vh;
+    --height-banner: 60vh;
+    --height-footer: 300px;
+
+    /* Padding y margin - Convenciones útiles */
+    --padding-horizontal: var(--space-lg);
+    --padding-vertical: var(--space-md);
+    --margin-horizontal: var(--space-md);
+    --margin-vertical: var(--space-sm);
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre Kitty</title>
+    <link rel="icon" href="../assets/img/iconoSolapa.png">
+
+    <!-- Fuentes - Correcto -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS - Correcto -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome - Correcto -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS personalizado - Observación: Rutas relativas correctas -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/iconoSolapa.png">
+</head>
+
+<body>
+    <!-- Navbar - Bien implementado -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-cat me-2"></i>Kitty Refugio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rincondepaz">Rincón de Paz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#encendetuluz">Encendé tu luz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gatitos">Gatitos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conversaciones">Conversaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content - Bien estructurado -->
+    <main class="container" style="padding-top: 100px;">
+        <!-- Secciones con fade-in - Correcto -->
+        <!-- Sugerencia: Podríamos añadir más estructura semántica con article/section -->
+        <section id="historia" class="fade-in-section">
+            <h2>Una historia de amor y sol</h2>
+            <p>Un viaje lleno de amor, resiliencia y ternura...</p>
+            <article>
+                <h3>Kitty & Mamá: Dos Vidas, Una Llama</h3>
+                <p>Una sección que cuenta la historia de tu vínculo con tu madre y con Kitty.</p>
+                <p>Galería de fotos (en blanco y sepia, con estética suave).</p>
+                <p>Fragmentos escritos como cartas, pensamientos, frases (tipo postales que aparecen al azar).</p>
+            </article>
+            <blockquote>
+                <p>“Este sitio nace del abrazo entre el dolor y la ternura… de una mujer, su madre, y una gata que ilumina los días.”</p>
+            </blockquote>
+        </section>
+
+        <!-- Resto de secciones - Mantengo tu estructura original -->
+        <!-- Solo añado comentarios para mejoras sugeridas -->
+        <section id="rincondepaz" class="fade-in-section">
+            <h2>Tu rincón de paz</h2>
+            <!-- Sugerencia: Podríamos estructurar esto como cards -->
+            <p>Postales aleatorias con frases, pensamientos o cartas que acaricien.</p>
+            <p>Tu Lugar en el Sol (interacción)</p>
+            <p>Espacio para dejar un mensaje, una carta, una dedicatoria.</p>
+            <p>Opción de navegar entre ellas como si hojeás un diario personal.</p>
+        </section>
+
+        <!-- Sección velitas - Ideal para implementar con JavaScript -->
+        <section id="encendetuluz" class="fade-in-section">
+            <h2>Encendé tu luz</h2>
+            <p>Un altar virtual con velitas que los visitantes pueden “encender”.</p>
+            <p>Al tocar una vela: se despliega un deseo, una dedicatoria o un simple “gracias”.</p>
+            <p>Opción de encender una velita virtual, con un deseo o agradecimiento (guardado en base de datos).</p>
+            <p>Mapa o lista con pequeñas luces encendidas por personas en todo el mundo (anónimas o firmadas).</p>
+            
+            <!-- Sugerencia: Aquí iría el div contenedor de las velitas -->
+            <div id="altar-velitas" class="mt-4">
+                <!-- Las velitas se generarán dinámicamente con JS -->
+            </div>
+        </section>
+
+        <!-- Sección gatitos - Podríamos implementar un grid -->
+        <section id="gatitos" class="fade-in-section">
+            <h2>Gatitos que salvan el mundo</h2>
+            <p>Galería de fotos de usuarios con sus mascotas y pequeñas historias.</p>
+            <p>Subida de fotos de gatos (o mascotas) de usuarios con sus historias.</p>
+            <p>Galería con estilo Pinterest. Diseño tipo mosaico o collage.</p>
+            <p>Frase debajo de cada imagen: "Este es [nombre], y me ayuda a ver el sol."</p>
+        </section>
+
+        <!-- Sección conversaciones - Ideal para un formulario -->
+        <section id="conversaciones" class="fade-in-section">
+            <h2>Conversaciones al sol</h2>
+            <p>Espacio para dejar un mensaje, reflexionar o simplemente decir: “Hoy estoy triste”.</p>
+            <p>Todo anónimo o con alias cálidos (“LunaInquieta”, “CorazónGatuno”, etc.).</p>
+            <p>Un espacio seguro para compartir pensamientos.</p>
+            <p>Opción de crear un perfil mínimo (sin redes sociales), solo con nombre o alias.</p>
+            <p>Mini foro tipo “cafecito”, donde la gente pueda comentar: “Hoy me sentí mejor gracias a esto” o “Extraño mucho a alguien pero encontré consuelo”.</p>
+        </section>
+
+        <!-- Galería - Podemos implementar con lightbox -->
+        <section id="galeria" class="fade-in-section">
+            <h2>Galería de recuerdos</h2>
+            <p>Fotos y momentos que atesoran el vínculo.</p>
+        </section>
+    </main>
+
+    <footer class="text-center mt-5 py-3 text-muted">
+        <div class="footermenu">
+            <p>“Gracias por venir. Que encuentres sol donde haya sombra.”</p>
+            <p><i class="fas fa-cat"></i> Iconito de Kitty en modo siesta</p>
+            <div class="footer-links mt-3">
+                <a href="#" class="text-muted mx-2">Contacto</a>
+                <a href="#" class="text-muted mx-2">Colaborar</a>
+                <a href="#" class="text-muted mx-2">Redes</a>
+            </div>
+            <p class="mt-3">Con amor, desde Kitty</p>
+        </div>
+    </footer>
+
+    <!-- Scripts - Rutas corregidas -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    
+    <!-- Sugerencia: Podríamos añadir un script específico para esta página -->
+    <script src="../assets/js/inicio.js"></script>
+</body>
+
+</html>

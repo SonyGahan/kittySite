@@ -1,0 +1,244 @@
+@import url('variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto-principal);
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    line-height: 1.6;
+}
+
+
+/* 🐾 Fondo Kitty - RUTA CORREGIDA */
+.background-overlay {
+    background-image: url("../img/fondoKitty.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ajustar para que no quede detrás */
+    /* Forzar visibilidad */
+    opacity: 1 !important;
+    display: block !important;
+    background-color: #e2ad7e;
+}
+
+/* Overlay de contenido - ESTILOS MEJORADOS */
+.overlay {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--texto-principal);
+    padding: var(--space-lg);
+    position: relative; /* Necesario para z-index */
+    z-index: 1; /* Se ubica sobre el fondo */
+}
+
+/* TITULOS */
+h1, h2, h3 {
+    text-shadow: var(--sombra-texto);
+    margin-bottom: var(--space-md);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: var(--text-3xl);
+    animation: fadeIn 3s ease-out forwards;
+    opacity: 0;
+}
+
+h2 {
+    font-size: var(--text-2xl);
+}
+
+h3 {
+    font-size: var(--text-xl);
+}
+
+/* BOTONES */
+.btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-md);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+    transition: background-color var(--transicion-media);
+    text-decoration: none;
+    margin: var(--space-sm);
+    animation: fadeIn 4s ease-out forwards;
+    opacity: 0;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transicion-media), transform var(--transicion-media);
+}
+
+.fade-in-section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-medio-oscuro);
+    padding: var(--space-sm) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-menu);
+    box-shadow: var(--sombra-suave);
+}
+
+.navbar a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    margin: 0 var(--space-sm);
+    font-size: var(--text-base);
+    transition: color var(--transicion-rapida);
+}
+
+.navbar a:hover {
+    color: var(--texto-secundario);
+}
+
+/* SECCION: Kitty y su Historia */
+.historia {
+    background-color: var(--fondo-seccion);
+    padding: var(--space-2xl);
+    text-align: center;
+}
+
+.historia p {
+    max-width: var(--max-width-md);
+    margin: 0 auto;
+    font-size: var(--text-md);
+    color: var(--texto-secundario);
+}
+
+/* SECCION: Rincón de Paz */
+.rincon {
+    background-color: var(--color-claro);
+    padding: var(--space-2xl);
+    border-radius: var(--border-radius-lg);
+    margin: var(--space-xl) auto;
+    max-width: var(--max-width-lg);
+    text-align: center;
+}
+
+/* SECCION: Encendé tu luz */
+.luz {
+    background: var(--color-medio-claro);
+    padding: var(--space-2xl);
+    color: var(--color-oscuro);
+    border-radius: var(--border-radius-md);
+}
+
+/* SECCION: Gatitos que salvan el mundo */
+.gatitos {
+    background: var(--color-medio);
+    padding: var(--space-2xl);
+    color: var(--texto-principal);
+}
+
+.gatitos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gatitos li {
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-base);
+}
+
+/* SECCION: Conversaciones al sol */
+.conversaciones {
+    background: var(--fondo-seccion);
+    padding: var(--space-2xl);
+    text-align: left;
+    max-width: var(--max-width-lg);
+    margin: auto;
+}
+
+/* SECCION: Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-2xl);
+    background-color: var(--fondo-base);
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion-media);
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer,
+.footermenu {
+    /*height: var(--height-footer);*/
+    width: 100%;
+    background-color: var(--color-medio-oscuro);
+    color: var(--texto-secundario);
+    text-align: center;
+    padding: var(--space-md);
+    font-size: var(--text-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media queries - Sugerencia: Podríamos añadir para mejor responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: var(--text-2xl);
+    }
+    
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
