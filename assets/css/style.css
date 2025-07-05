@@ -12,10 +12,9 @@ html {
 
 body,
 html {
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--texto-principal);
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    background-color: var(--color-medio-claro);
     line-height: 1.6;
 }
 
@@ -66,15 +65,46 @@ h1 {
     font-size: var(--text-3xl);
     animation: fadeIn 3s ease-out forwards;
     opacity: 0;
+    color: var(--texto-principal);
 }
 
 h2 {
     font-size: var(--text-2xl);
+    color: var(--texto-principal);
+    border-bottom: 2px solid var(--color-medio-oscuro);
+    padding-bottom: var(--space-sm);
 }
 
 h3 {
     font-size: var(--text-xl);
+    color: var(--texto-secundario);
 }
+
+/* PÁRRAFOS */
+p {
+    font-size: var(--text-base);
+    color: var(--texto-secundario);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--color-medio-oscuro);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    border-radius: var(--border-radius-md);
+    font-style: italic;
+    backdrop-filter: blur(5px);
+}
+
+blockquote p {
+    font-size: var(--text-lg);
+    color: var(--texto-principal);
+    margin-bottom: 0;
+}
+
 
 /* BOTONES */
 .btn {
@@ -85,16 +115,49 @@ h3 {
     border: none;
     border-radius: var(--border-radius-full);
     cursor: pointer;
-    transition: background-color var(--transicion-media);
+    transition: all var(--transicion-media);
     text-decoration: none;
     margin: var(--space-sm);
-    animation: fadeIn 4s ease-out forwards;
-    opacity: 0;
+    display: inline-block;
+    box-shadow: var(--sombra-suave);
 }
 
 .btn:hover {
     background-color: var(--btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+/* Botones específicos */
+.btn-encender {
+    background-color: var(--color-medio-oscuro);
+    color: var(--texto-principal);
+}
+
+.btn-encender:hover {
+    background-color: var(--color-oscuro);
+}
+
+.btn-gatitos {
+    background-color: var(--color-medio);
+    color: var(--texto-principal);
+}
+
+.btn-gatitos:hover {
+    background-color: var(--color-medio-oscuro);
+}
+
+.btn-conversaciones {
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+}
+
+.btn-conversaciones:hover {
+    background-color: var(--color-medio-claro);
+}
+
+
 
 /* ANIMACIONES */
 @keyframes fadeIn {
@@ -116,19 +179,21 @@ h3 {
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--color-medio-oscuro);
+    background-color: rgba(191, 90, 54, 0.95) !important;
+    backdrop-filter: blur(10px);
     padding: var(--space-sm) var(--space-lg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: var(--z-index-menu);
     box-shadow: var(--sombra-suave);
+    z-index: var(--z-index-menu);
+}
+
+.navbar-brand {
+    font-size: var(--text-xl);
+    font-weight: bold;
+    color: var(--texto-principal) !important;
 }
 
 .navbar a {
-    color: var(--texto-principal);
+    color: var(--texto-principal) !important;
     text-decoration: none;
     margin: 0 var(--space-sm);
     font-size: var(--text-base);
@@ -136,74 +201,186 @@ h3 {
 }
 
 .navbar a:hover {
-    color: var(--texto-secundario);
+    color: var(--texto-secundario) !important;
 }
 
-/* SECCION: Kitty y su Historia */
+/* CONTENEDOR PRINCIPAL */
+.container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(3px);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--sombra-suave);
+}
+
+/* SECCIONES */
+section {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+
+/* SECCION: Historia */
 .historia {
-    background-color: var(--fondo-seccion);
-    padding: var(--space-2xl);
+    background-color: rgba(245, 175, 119, 0.678);
     text-align: center;
 }
 
 .historia p {
     max-width: var(--max-width-md);
-    margin: 0 auto;
-    font-size: var(--text-md);
-    color: var(--texto-secundario);
+    margin: 0 auto var(--space-md) auto;
+}
+
+.historia article {
+    text-align: left;
+    margin-top: var(--space-xl);
 }
 
 /* SECCION: Rincón de Paz */
 .rincon {
-    background-color: var(--color-claro);
-    padding: var(--space-2xl);
-    border-radius: var(--border-radius-lg);
-    margin: var(--space-xl) auto;
-    max-width: var(--max-width-lg);
+    background-color: rgba(238, 203, 150, 0.733);
     text-align: center;
+}
+
+.card-rincon {
+    background: rgba(255, 255, 255, 0.438);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--space-md);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-rincon h5 {
+    color: var(--texto-principal);
+    margin-bottom: var(--space-sm);
 }
 
 /* SECCION: Encendé tu luz */
 .luz {
-    background: var(--color-medio-claro);
-    padding: var(--space-2xl);
-    color: var(--color-oscuro);
-    border-radius: var(--border-radius-md);
-}
-
-/* SECCION: Gatitos que salvan el mundo */
-.gatitos {
-    background: var(--color-medio);
-    padding: var(--space-2xl);
+    background: rgba(226, 173, 126, 0.705);
     color: var(--texto-principal);
 }
 
-.gatitos ul {
-    list-style: none;
-    padding: 0;
+/* Altar de velitas */
+#altar-velitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-lg);
+    margin: var(--space-lg) 0;
 }
 
-.gatitos li {
-    margin-bottom: var(--space-sm);
-    font-size: var(--text-base);
+.velita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform var(--transicion-media);
+    padding: var(--space-sm);
+    border-radius: var(--border-radius-sm);
 }
 
-/* SECCION: Conversaciones al sol */
+.velita:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.velita-icon {
+    font-size: var(--text-2xl);
+    color: var(--color-medio-oscuro);
+    margin-bottom: var(--space-xs);
+}
+
+.velita.encendida .velita-icon {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.velita-texto {
+    font-size: var(--text-xs);
+    color: var(--texto-secundario);
+    text-align: center;
+}
+
+
+/* SECCION: Gatitos */
+.gatitos {
+    background: rgba(216, 139, 95, 0.644);
+    color: var(--texto-principal);
+}
+
+.gatito-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    margin-bottom: var(--space-md);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform var(--transicion-media);
+}
+
+.gatito-card:hover {
+    transform: translateY(-5px);
+}
+
+.gatito-card i {
+    color: var(--color-medio-oscuro);
+}
+
+
+/* SECCION: Conversaciones */
 .conversaciones {
-    background: var(--fondo-seccion);
-    padding: var(--space-2xl);
+    background: rgba(255, 249, 242, 0.692);
     text-align: left;
-    max-width: var(--max-width-lg);
-    margin: auto;
 }
+
+.conversacion-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--space-md);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.conversacion-card h4 {
+    color: var(--texto-principal);
+    margin-bottom: var(--space-sm);
+}
+
 
 /* SECCION: Galería */
 .galeria {
+    background-color: rgba(245, 193, 147, 0.712);
+}
+
+.galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-md);
-    padding: var(--space-2xl);
-    background-color: var(--fondo-base);
+    margin-top: var(--space-lg);
+}
+
+.galeria-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform var(--transicion-media);
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
 }
 
 .galeria img {
@@ -220,25 +397,155 @@ h3 {
 /* FOOTER */
 footer,
 .footermenu {
-    /*height: var(--height-footer);*/
     width: 100%;
-    background-color: var(--color-medio-oscuro);
+    background-color: rgba(191, 90, 54, 0.95);
     color: var(--texto-secundario);
     text-align: center;
-    padding: var(--space-md);
+    padding: var(--space-xl);
     font-size: var(--text-sm);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    backdrop-filter: blur(10px);
 }
 
-/* Media queries - Sugerencia: Podríamos añadir para mejor responsividad */
+.footer-links a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    transition: color var(--transicion-rapida);
+}
+
+.footer-links a:hover {
+    color: var(--texto-principal);
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+    .container {
+        padding: var(--space-md);
+    }
+    
     h1 {
         font-size: var(--text-2xl);
     }
     
-    .galeria {
+    h2 {
+        font-size: var(--text-xl);
+    }
+    
+    section {
+        padding: var(--space-md);
+    }
+    
+    .galeria-grid {
         grid-template-columns: 1fr;
+    }
+    
+    #altar-velitas {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: var(--space-sm) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        backdrop-filter: blur(1px);
+    }
+    
+    .container {
+        margin: var(--space-sm);
+        padding: var(--space-sm);
+    }
+    
+    section {
+        padding: var(--space-sm);
+    }
+    
+    h2 {
+        font-size: var(--text-lg);
+    }
+    
+    .navbar-brand {
+        font-size: var(--text-lg);
+    }
+}
+
+
+/* ===== ESTILOS ESPECÍFICOS PARA INDEX.HTML ===== */
+
+/* Botón principal del index */
+.btn-primary {
+    background-color: var(--btn-bg, #bf5a36);
+    color: var(--btn-text, #fff);
+    border: 2px solid var(--btn-bg, #bf5a36);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(191, 90, 54, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(135deg, #bf5a36, #d4956b);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #a04a2e, #bf5a36);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(191, 90, 54, 0.4);
+    color: #fff;
+    border-color: #a04a2e;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(191, 90, 54, 0.3);
+}
+
+/* Asegurar que el botón sea visible sobre el fondo */
+.btn-primary {
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsivo para el botón principal */
+@media (max-width: 768px) {
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* Asegurar que el main tenga el z-index correcto */
+main {
+    position: relative;
+    z-index: 5;
+}
+
+/* Efecto de pulsación suave para el botón */
+.btn-primary {
+    animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(191, 90, 54, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(191, 90, 54, 0.5);
     }
 }
