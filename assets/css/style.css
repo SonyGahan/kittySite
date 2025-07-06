@@ -8,16 +8,21 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
-body,
-html {
-    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    font-family: var(--fuente-secundaria);
     color: var(--texto-principal);
-    background-color: var(--color-medio-claro);
     line-height: 1.6;
-}
 
+    background-image: url("../img/fondoKitty.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 👈 Scroll parallax */
+    background-color: #e2ad7e;
+}
 
 /* 🐾 Fondo Kitty - RUTA CORREGIDA */
 .background-overlay {
@@ -54,8 +59,20 @@ html {
     z-index: 1; /* Se ubica sobre el fondo */
 }
 
+/* 🎯 Imagen de fondo adaptada para celulares */
+@media (max-width: 768px) {
+    .background-overlay {
+        background-image: url("../img/fondoKitty-mobile.jpg");
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+}
+
 /* TITULOS */
 h1, h2, h3 {
+    font-family: var(--fuente-principal);
     text-shadow: var(--sombra-texto);
     margin-bottom: var(--space-md);
     font-weight: bold;
@@ -181,9 +198,16 @@ blockquote p {
 .navbar {
     background-color: rgba(191, 90, 54, 0.95) !important;
     backdrop-filter: blur(10px);
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-sm) 0;
     box-shadow: var(--sombra-suave);
     z-index: var(--z-index-menu);
+}
+
+.navbar .container {
+    max-width: var(--max-width-lg); /* podés subir a xl si querés más ancho */
+    margin: 0 auto;
+    padding: 0 var(--space-lg); /* espacio interno para los elementos del menú */
+    width: 100%;
 }
 
 .navbar-brand {
@@ -213,11 +237,20 @@ blockquote p {
     box-shadow: var(--sombra-suave);
 }
 
+/* MAIN GLOBAL: Asegura espacio debajo del header fijo */
+main {
+    padding-top: calc(var(--height-header) + var(--space-xl));
+}
+
 /* SECCIONES */
+.section-top-spaced {
+    margin-top: var(--space-2xl); /* o el que uses entre secciones */
+}
+
 section {
     margin-bottom: var(--space-2xl);
     padding: var(--space-xl);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.473);
     border-radius: var(--border-radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -226,7 +259,7 @@ section {
 
 /* SECCION: Historia */
 .historia {
-    background-color: rgba(245, 175, 119, 0.678);
+    background-color: rgba(245, 176, 119, 0.767);
     text-align: center;
 }
 
@@ -395,15 +428,33 @@ section {
 }
 
 /* FOOTER */
-footer,
-.footermenu {
-    width: 100%;
-    background-color: rgba(191, 90, 54, 0.95);
-    color: var(--texto-secundario);
-    text-align: center;
-    padding: var(--space-xl);
-    font-size: var(--text-sm);
-    backdrop-filter: blur(10px);
+.footer-index {
+  background-color: var(--color-oscuro);
+  backdrop-filter: blur(2px);
+  padding: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--texto-principal);
+  text-align: center;
+  height: auto;
+  z-index: var(--z-index-base);
+  box-shadow: var(--sombra-suave);
+}
+
+.footer-inicio {
+  background-color: var(--color-oscuro);
+  backdrop-filter: blur(2px);
+  padding: var(--space-xl);
+  font-size: var(--text-sm);
+  color: var(--texto-principal);
+  text-align: center;
+  height: auto;
+  border-top: var(--border-thin) solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--sombra-suave);
+}
+
+.footer-inicio .footermenu {
+  max-width: var(--max-width-lg);
+  margin: auto;
 }
 
 .footer-links a {
@@ -414,6 +465,12 @@ footer,
 
 .footer-links a:hover {
     color: var(--texto-principal);
+}
+
+/* FORMULARIOS */
+form, input, textarea, button, select {
+    font-family: var(--fuente-terciaria);
+    font-size: var(--text-base);
 }
 
 /* RESPONSIVE */
