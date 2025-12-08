@@ -1,0 +1,39 @@
+/* ===== ANIMATIONS.CSS: Keyframes y Efectos ===== */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transicion-media), transform var(--transicion-media);
+}
+
+    .fade-in-section.appear {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+h1 {
+    /* Sobrescritura específica para animación */
+    animation: fadeIn 3s ease-out forwards;
+    opacity: 0;
+}
+
+/* Efecto de pulso suave para botón primary */
+.btn-primary {
+    animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(191, 90, 54, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 6px 25px rgba(191, 90, 54, 0.5);
+    }
+}

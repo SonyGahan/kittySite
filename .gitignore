@@ -1,0 +1,24 @@
+# Ignorar archivos de configuración específicos
+.env
+config/local.yml
+
+# Ignorar carpetas específicas
+/archivos/
+/node_modules/
+dist/
+build/
+
+# Ignorar archivos de logs
+*.log
+logs/
+*.tmp
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de compilación
+*.class
+*.o
+bin/
+out/

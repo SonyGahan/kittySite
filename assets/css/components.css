@@ -1,0 +1,166 @@
+/* ===== COMPONENTS.CSS: Elementos UI Reutilizables ===== */
+
+/* BOTONES GENERALES */
+.btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-md);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+    transition: all var(--transicion-media);
+    text-decoration: none;
+    margin: var(--space-sm);
+    display: inline-block;
+    box-shadow: var(--sombra-suave);
+}
+
+    .btn:hover {
+        background-color: var(--btn-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+/* Variantes de Botones */
+.btn-encender {
+    background-color: var(--color-medio-oscuro);
+    color: var(--texto-principal);
+}
+
+    .btn-encender:hover {
+        background-color: var(--color-oscuro);
+    }
+
+.btn-gatitos {
+    background-color: var(--color-medio);
+    color: var(--texto-principal);
+}
+
+    .btn-gatitos:hover {
+        background-color: var(--color-medio-oscuro);
+    }
+
+.btn-conversaciones {
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+}
+
+    .btn-conversaciones:hover {
+        background-color: var(--color-medio-claro);
+    }
+
+/* BOT�N PRINCIPAL (Index) */
+.btn-primary {
+    background-color: var(--btn-bg, #bf5a36);
+    color: var(--btn-text, #fff);
+    border: 2px solid var(--btn-bg, #bf5a36);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(191, 90, 54, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(135deg, #bf5a36, #d4956b);
+    position: relative;
+    z-index: 10;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #a04a2e, #bf5a36);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(191, 90, 54, 0.4);
+        color: #fff;
+        border-color: #a04a2e;
+    }
+
+    .btn-primary:active {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(191, 90, 54, 0.3);
+    }
+
+/* CARDS */
+.card-rincon, .gatito-card, .conversacion-card, .galeria-item {
+    background: rgba(255, 255, 255, 0.1); /* Fallback */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-lg);
+}
+
+.card-rincon {
+    background: rgba(255, 255, 255, 0.438);
+    margin-bottom: var(--space-md);
+}
+
+    .card-rincon h5, .conversacion-card h4 {
+        color: var(--texto-principal);
+        margin-bottom: var(--space-sm);
+    }
+
+.gatito-card {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-bottom: var(--space-md);
+    transition: transform var(--transicion-media);
+}
+
+    .gatito-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .gatito-card i {
+        color: var(--color-medio-oscuro);
+    }
+
+.conversacion-card {
+    margin-bottom: var(--space-md);
+}
+
+.galeria-item {
+    padding: var(--space-xl);
+    text-align: center;
+    transition: transform var(--transicion-media);
+}
+
+    .galeria-item:hover {
+        transform: scale(1.05);
+    }
+
+/* VELITAS */
+.velita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform var(--transicion-media);
+    padding: var(--space-sm);
+    border-radius: var(--border-radius-sm);
+}
+
+    .velita:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+.velita-icon {
+    font-size: var(--text-2xl);
+    color: var(--color-medio-oscuro);
+    margin-bottom: var(--space-xs);
+}
+
+.velita.encendida .velita-icon {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.velita-texto {
+    font-size: var(--text-xs);
+    color: var(--texto-secundario);
+    text-align: center;
+}

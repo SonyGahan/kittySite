@@ -1,0 +1,92 @@
+/* ===== SECTIONS.CSS: Estilos de Secciones Específicas ===== */
+
+.section-top-spaced {
+    margin-top: var(--space-2xl);
+}
+
+section {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl);
+    background: rgba(255, 255, 255, 0.473);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* HISTORIA */
+.historia {
+    background-color: rgba(245, 176, 119, 0.767);
+    text-align: center;
+}
+
+    .historia p {
+        max-width: var(--max-width-md);
+        margin: 0 auto var(--space-md) auto;
+    }
+
+    .historia article {
+        text-align: left;
+        margin-top: var(--space-xl);
+    }
+
+/* RINCÓN */
+.rincon {
+    background-color: rgba(238, 203, 150, 0.733);
+    text-align: center;
+}
+
+/* LUZ (Altar) */
+.luz {
+    background: rgba(226, 173, 126, 0.705);
+    color: var(--texto-principal);
+}
+
+#altar-velitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-lg);
+    margin: var(--space-lg) 0;
+}
+
+/* GATITOS */
+.gatitos {
+    background: rgba(216, 139, 95, 0.644);
+    color: var(--texto-principal);
+}
+
+/* CONVERSACIONES */
+.conversaciones {
+    background: rgba(255, 249, 242, 0.692);
+    text-align: left;
+}
+
+/* GALERÍA */
+.galeria {
+    background-color: rgba(245, 193, 147, 0.712);
+}
+
+.galeria-grid {
+    display: grid;
+    /* CORRECCIÓN PRO: min(250px, 100%)
+       Esto significa: "Usa 250px como ancho mínimo, PERO si la pantalla 
+       es menor a 250px (ej. un reloj o móvil muy antiguo), usa el 100%".
+       Evita desbordamientos horizontales indeseados.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion-media);
+}
+
+    .galeria img:hover {
+        transform: scale(1.05);
+    }

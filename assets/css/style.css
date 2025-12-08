@@ -1,0 +1,24 @@
+/* SITIO KITTY - MAIN STYLESHEET
+    Este archivo orquesta la importación de todos los módulos.
+*/
+
+/* 1. Variables y Configuración */
+@import url('variables.css');
+
+/* 2. Base y Resets */
+@import url('base.css');
+
+/* 3. Layout y Estructura */
+@import url('layout.css');
+
+/* 4. Componentes y UI */
+@import url('components.css');
+
+/* 5. Secciones Específicas */
+@import url('sections.css');
+
+/* 6. Animaciones */
+@import url('animations.css');
+
+/* 7. Responsive (Siempre al final para sobrescribir) */
+@import url('responsive.css');

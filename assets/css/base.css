@@ -1,0 +1,75 @@
+/* ===== BASE.CSS: Resets y Estilos Globales ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: var(--fuente-secundaria);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    background-color: #e2ad7e;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+    font-family: var(--fuente-principal);
+    text-shadow: var(--sombra-texto);
+    margin-bottom: var(--space-md);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: var(--text-3xl);
+    /* La animación se moverá a animations.css, pero dejamos la propiedad base aquí */
+    color: var(--texto-principal);
+}
+
+h2 {
+    font-size: var(--text-2xl);
+    color: var(--texto-principal);
+    border-bottom: 2px solid var(--color-medio-oscuro);
+    padding-bottom: var(--space-sm);
+}
+
+h3 {
+    font-size: var(--text-xl);
+    color: var(--texto-secundario);
+}
+
+/* PÁRRAFOS Y CITAS */
+p {
+    font-size: var(--text-base);
+    color: var(--texto-secundario);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+blockquote {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--color-medio-oscuro);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    border-radius: var(--border-radius-md);
+    font-style: italic;
+    backdrop-filter: blur(5px);
+}
+
+    blockquote p {
+        font-size: var(--text-lg);
+        color: var(--texto-principal);
+        margin-bottom: 0;
+    }
+
+/* FORMULARIOS */
+form, input, textarea, button, select {
+    font-family: var(--fuente-terciaria);
+    font-size: var(--text-base);
+}

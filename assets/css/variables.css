@@ -1,0 +1,118 @@
+:root {
+    /* Paleta Kitty */
+    --color-claro: #eecb96;
+    --color-medio-claro: #e2ad7e;
+    --color-medio: #d88b5f;
+    --color-medio-oscuro: #bf5a36;
+    --color-oscuro: #a82824;
+
+    /* Textos */
+    --texto-principal: #fff5e1;
+    --texto-secundario: #e7d7c1;
+
+    /* Botones */
+    --btn-bg: rgba(140, 28, 19, 0.8);
+    --btn-text: #ffffff;
+    --btn-hover: rgba(140, 28, 19, 1);
+
+    /* Fondos */
+    --fondo-base: #fdf6f0;
+    --fondo-seccion: #fff9f2;
+
+    /* Bordes y sombras */
+    --borde-suave: 1px solid rgba(0, 0, 0, 0.1);
+    --sombra-suave: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    /* Sombras y efectos */
+    --sombra-texto: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --filtro-fondo: brightness(0.8) sepia(10%);
+
+
+    /* 🎨 Tamaños de texto */
+    --text-xs: 0.75rem;   /* 12px */
+    --text-sm: 0.875rem;  /* 14px */
+    --text-base: 1rem;    /* 16px */
+    --text-md: 1.125rem;  /* 18px */
+    --text-lg: 1.25rem;   /* 20px */
+    --text-xl: 1.5rem;    /* 24px */
+    --text-2xl: 2rem;     /* 32px */
+    --text-3xl: 3rem;     /* 48px */
+    --text-4xl: 4rem;     /* 64px */
+
+    /* 📐 Espaciados generales */
+    --space-xxs: 0.25rem; /* 4px */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 0.75rem;  /* 12px */
+    --space-md: 1rem;     /* 16px */
+    --space-lg: 1.5rem;   /* 24px */
+    --space-xl: 2rem;     /* 32px */
+    --space-2xl: 3rem;    /* 48px */
+    --space-3xl: 4rem;    /* 64px */
+
+    /* 📏 Anchos y límites */
+    --max-width-sm: 540px;
+    --max-width-md: 720px;
+    --max-width-lg: 960px;
+    --max-width-xl: 1140px;
+    --max-width-full: 100%;
+
+    /* 🔲 Bordes y esquinas */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 9999px;
+
+    --border-thin: 1px;
+    --border-medium: 2px;
+    --border-thick: 4px;
+
+    /* 📏 Alturas comunes */
+    --height-header: 60px;
+    --height-hero: 80vh;
+    --height-section-min: 50vh;
+
+    
+    /*Capas de profundidad*/
+    --z-index-base: 1;
+    --z-index-menu: 10;
+    --z-index-modal: 100;
+    --z-index-toast: 200;
+
+    /*Animaciones y transiciones*/
+    --transicion-rapida: 0.2s ease-in-out;
+    --transicion-media: 0.4s ease;
+    --duracion-animacion: 0.6s;
+    --easing-principal: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Tamaños de contenedores responsive*/
+    --container-xs: 320px;
+    --container-sm: 480px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-xxl: 1440px;
+
+    /*Breakpoints (media queries base)*/
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+
+    /*Opacidades y transparencias comunes*/
+    --opacidad-suave: 0.8;
+    --opacidad-media: 0.5;
+    --opacidad-baja: 0.3;
+
+    /*Alturas extra para estructuras grandes*/
+    --height-fullscreen: 100vh;
+    --height-banner: 60vh;
+    --height-footer: 300px;
+
+    /*Padding y margin predefinidos por dirección */
+    --padding-horizontal: var(--space-lg);
+    --padding-vertical: var(--space-md);
+    --margin-horizontal: var(--space-md);
+    --margin-vertical: var(--space-sm);
+}

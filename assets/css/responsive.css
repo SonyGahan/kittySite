@@ -1,0 +1,105 @@
+/* ===== RESPONSIVE.CSS: Adaptabilidad ===== */
+
+/* TABLET Y MÓVIL GRANDE (hasta 768px)
+   Aquí corregimos R4.1 (Breakpoints intermedios) y R4.2 (Botones)
+*/
+@media (max-width: 768px) {
+
+    /* LAYOUT */
+    /* Usamos .container-glass en lugar de .container para no afectar al menú */
+    .container-glass {
+        padding: var(--space-md);
+    }
+
+    /* Fondo específico para móvil (más liviano y centrado) */
+    .background-overlay {
+        background-image: url("../img/fondoKitty-mobile.jpg");
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    /* TIPOGRAFÍA */
+    h1 {
+        font-size: var(--text-2xl);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    /* SECCIONES */
+    section {
+        padding: var(--space-md);
+    }
+
+    /* CORRECCIÓN R4.3 - Grid de Galería Inteligente
+       En lugar de forzar 1 columna (1fr), permitimos 2 columnas si caben.
+       Bajamos el mínimo a 200px para que entren dos en pantallas de 700px.
+    */
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #altar-velitas {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+
+    /* CORRECCIÓN R4.2 - Botones Selectivos
+       ANTES: .btn { width: 100% } -> Afectaba a todos los botones.
+       AHORA: Solo los botones de acción principal se expanden.
+    */
+    .btn-primary,
+    .btn-encender,
+    .btn-gatitos,
+    .btn-conversaciones {
+        display: block;
+        width: 100%;
+        margin: var(--space-sm) 0;
+    }
+
+    /* El botón del index necesita ajustes específicos */
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* MÓVIL PEQUEÑO (hasta 480px)
+   Ajustes finos para pantallas muy estrechas
+*/
+@media (max-width: 480px) {
+    .overlay {
+        backdrop-filter: blur(1px);
+    }
+
+    .container-glass {
+        margin: var(--space-sm);
+        padding: var(--space-sm);
+    }
+
+    section {
+        padding: var(--space-sm);
+    }
+
+    h2 {
+        font-size: var(--text-lg);
+    }
+
+    .navbar-brand {
+        font-size: var(--text-lg);
+    }
+
+    /* En pantallas muy chicas (<480px), aquí sí forzamos 1 columna por seguridad */
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 90%;
+        max-width: 300px; /* Evita que se estire demasiado en horizontal */
+    }
+}
