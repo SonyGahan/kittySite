@@ -2,15 +2,19 @@
 
 /* Fondo Kitty Overlay */
 .background-overlay {
+    /* Usamos la imagen editada para desktop */
     background-image: url("../img/fondoKitty.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    
+    /* FIX: Usamos 100% para respetar el ancho del body y no salirnos */
+    width: 100%;
+    height: 100vh;
+    
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 0;
     opacity: 1 !important;
     display: block !important;
@@ -43,12 +47,12 @@
     z-index: var(--z-index-menu);
 }
 
-    .navbar .container {
-        max-width: var(--max-width-lg);
-        margin: 0 auto;
-        padding: 0 var(--space-lg);
-        width: 100%;
-    }
+.navbar .container {
+    max-width: var(--max-width-lg);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+    width: 100%;
+}
 
 .navbar-brand {
     font-size: var(--text-xl);
@@ -64,10 +68,9 @@
     transition: color var(--transicion-rapida);
 }
 
-    .navbar a:hover {
-        color: var(--texto-secundario) !important;
-    }
-
+.navbar a:hover {
+    color: var(--texto-secundario) !important;
+}
 
 /* CONTENEDOR PRINCIPAL - distinto del contenedor de Bootstrap */
 .container-glass {
@@ -78,7 +81,6 @@
     box-shadow: var(--sombra-suave);
 }
 
-
 /* MAIN GLOBAL */
 main {
     padding-top: calc(var(--height-header) + var(--space-xl));
@@ -86,17 +88,25 @@ main {
     z-index: 5;
 }
 
-/* FOOTER */
+/* ===== FOOTER (Versión Limpia y Estable) ===== */
+
+.footer-index,
+.footer-inicio {
+    width: 100%; /* Ocupa el ancho natural del contenedor */
+    position: relative;
+    z-index: 10; /* Encima del fondo */
+    
+    text-align: center;
+    color: var(--texto-principal);
+    box-shadow: var(--sombra-suave);
+    margin: 0;
+}
+
 .footer-index {
     background-color: var(--color-oscuro);
     backdrop-filter: blur(2px);
     padding: var(--space-md);
     font-size: var(--text-sm);
-    color: var(--texto-principal);
-    text-align: center;
-    height: auto;
-    z-index: var(--z-index-base);
-    box-shadow: var(--sombra-suave);
 }
 
 .footer-inicio {
@@ -104,17 +114,13 @@ main {
     backdrop-filter: blur(2px);
     padding: var(--space-xl);
     font-size: var(--text-sm);
-    color: var(--texto-principal);
-    text-align: center;
-    height: auto;
     border-top: var(--border-thin) solid rgba(255, 255, 255, 0.2);
-    box-shadow: var(--sombra-suave);
 }
 
-    .footer-inicio .footermenu {
-        max-width: var(--max-width-lg);
-        margin: auto;
-    }
+.footer-inicio .footermenu {
+    max-width: var(--max-width-lg);
+    margin: auto;
+}
 
 .footer-links a {
     color: var(--texto-secundario);
@@ -122,6 +128,6 @@ main {
     transition: color var(--transicion-rapida);
 }
 
-    .footer-links a:hover {
-        color: var(--texto-principal);
-    }
+.footer-links a:hover {
+    color: var(--texto-principal);
+}

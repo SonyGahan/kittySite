@@ -1,4 +1,4 @@
-/* ===== SECTIONS.CSS: Estilos de Secciones Específicas ===== */
+/* ===== SECTIONS.CSS: Estilos de Secciones Especï¿½ficas ===== */
 
 .section-top-spaced {
     margin-top: var(--space-2xl);
@@ -7,7 +7,7 @@
 section {
     margin-bottom: var(--space-2xl);
     padding: var(--space-xl);
-    background: rgba(255, 255, 255, 0.473);
+    background: rgba(216, 139, 95, 0.644);
     border-radius: var(--border-radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -15,7 +15,7 @@ section {
 
 /* HISTORIA */
 .historia {
-    background-color: rgba(245, 176, 119, 0.767);
+    background-color: rgba(216, 139, 95, 0.644);
     text-align: center;
 }
 
@@ -29,7 +29,7 @@ section {
         margin-top: var(--space-xl);
     }
 
-/* RINCÓN */
+/* RINCï¿½N */
 .rincon {
     background-color: rgba(238, 203, 150, 0.733);
     text-align: center;
@@ -59,20 +59,20 @@ section {
 
 /* CONVERSACIONES */
 .conversaciones {
-    background: rgba(255, 249, 242, 0.692);
+    background:  rgba(238, 203, 150, 0.733);
     text-align: left;
 }
 
-/* GALERÍA */
+/* GALERï¿½A */
 .galeria {
     background-color: rgba(245, 193, 147, 0.712);
 }
 
 .galeria-grid {
     display: grid;
-    /* CORRECCIÓN PRO: min(250px, 100%)
-       Esto significa: "Usa 250px como ancho mínimo, PERO si la pantalla 
-       es menor a 250px (ej. un reloj o móvil muy antiguo), usa el 100%".
+    /* CORRECCIï¿½N PRO: min(250px, 100%)
+       Esto significa: "Usa 250px como ancho mï¿½nimo, PERO si la pantalla 
+       es menor a 250px (ej. un reloj o mï¿½vil muy antiguo), usa el 100%".
        Evita desbordamientos horizontales indeseados.
     */
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));

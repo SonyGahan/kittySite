@@ -1,17 +1,17 @@
 /* ===== RESPONSIVE.CSS: Adaptabilidad ===== */
 
-/* TABLET Y MÓVIL GRANDE (hasta 768px)
-   Aquí corregimos R4.1 (Breakpoints intermedios) y R4.2 (Botones)
+/* TABLET Y Mï¿½VIL GRANDE (hasta 768px)
+   Aquï¿½ corregimos R4.1 (Breakpoints intermedios) y R4.2 (Botones)
 */
 @media (max-width: 768px) {
 
     /* LAYOUT */
-    /* Usamos .container-glass en lugar de .container para no afectar al menú */
+    /* Usamos .container-glass en lugar de .container para no afectar al menï¿½ */
     .container-glass {
         padding: var(--space-md);
     }
 
-    /* Fondo específico para móvil (más liviano y centrado) */
+    /* Fondo especï¿½fico para mï¿½vil (mï¿½s liviano y centrado) */
     .background-overlay {
         background-image: url("../img/fondoKitty-mobile.jpg");
         background-position: center top;
@@ -20,7 +20,7 @@
         background-attachment: scroll;
     }
 
-    /* TIPOGRAFÍA */
+    /* TIPOGRAFï¿½A */
     h1 {
         font-size: var(--text-2xl);
     }
@@ -34,9 +34,9 @@
         padding: var(--space-md);
     }
 
-    /* CORRECCIÓN R4.3 - Grid de Galería Inteligente
+    /* CORRECCIï¿½N R4.3 - Grid de Galerï¿½a Inteligente
        En lugar de forzar 1 columna (1fr), permitimos 2 columnas si caben.
-       Bajamos el mínimo a 200px para que entren dos en pantallas de 700px.
+       Bajamos el mï¿½nimo a 200px para que entren dos en pantallas de 700px.
     */
     .galeria-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -46,9 +46,9 @@
         grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     }
 
-    /* CORRECCIÓN R4.2 - Botones Selectivos
+    /* CORRECCIï¿½N R4.2 - Botones Selectivos
        ANTES: .btn { width: 100% } -> Afectaba a todos los botones.
-       AHORA: Solo los botones de acción principal se expanden.
+       AHORA: Solo los botones de acciï¿½n principal se expanden.
     */
     .btn-primary,
     .btn-encender,
@@ -59,14 +59,14 @@
         margin: var(--space-sm) 0;
     }
 
-    /* El botón del index necesita ajustes específicos */
+    /* El botï¿½n del index necesita ajustes especï¿½ficos */
     .btn-primary {
         padding: 12px 25px;
         font-size: 1rem;
     }
 }
 
-/* MÓVIL PEQUEÑO (hasta 480px)
+/* Mï¿½VIL PEQUEï¿½O (hasta 480px)
    Ajustes finos para pantallas muy estrechas
 */
 @media (max-width: 480px) {
@@ -91,7 +91,7 @@
         font-size: var(--text-lg);
     }
 
-    /* En pantallas muy chicas (<480px), aquí sí forzamos 1 columna por seguridad */
+    /* En pantallas muy chicas (<480px), aquï¿½ sï¿½ forzamos 1 columna por seguridad */
     .galeria-grid {
         grid-template-columns: 1fr;
     }

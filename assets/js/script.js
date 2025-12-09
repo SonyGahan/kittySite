@@ -344,7 +344,7 @@ function renderizarConversaciones() {
             <div class="conversacion-card">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <strong class="text-warning">${conv.alias}</strong>
-                    <small class="text-muted">${conv.fecha.toLocaleDateString()}</small>
+                    <small class="text-muted">${new Date(conv.fecha).toLocaleDateString()}</small>
                 </div>
                 <p class="mb-0">${conv.mensaje}</p>
             </div>
